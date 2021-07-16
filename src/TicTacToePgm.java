@@ -18,9 +18,9 @@ public class TicTacToePgm {
 		return board;
 		}
 	
-		/*
-		 * Creating giving input method to give user input
-		 */
+	/*
+	 * Creating giving input method to give user input
+	 */
 	public static char givingInput() {	
 		//Determining the player letter and computer letter
 		System.out.println("Computer letter is X ");
@@ -32,14 +32,33 @@ public class TicTacToePgm {
 		System.out.println("Entered Character is:" +input );
 		return input;
 		}	
+	
+	/*
+	 * Creating ShowBoard method to display the current board
+	 */
+	public static void showBoard(char[] board)
+	
+	//Print conditions for to Printing the board 
+    {
+        System.out.println("|---|---|---|");
+        System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2]+ " |");
+        System.out.println("|-----------|");
+        System.out.println("| " + board[3] + " | " + board[4] + " | " + board[5]+ " |");
+        System.out.println("|-----------|");
+        System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
+        System.out.println("|---|---|---|");
+    
+        }
 		
-		/*
-		 * Declaring main method here
-		 * Calling createBoard method in main method
-		 * Calling giving input method in main method
-		 */
+	/*
+	* Declaring main method here
+	* Calling createBoard method in main method
+	*  Calling giving input method in main method
+	*  Calling Show Board method in main method
+	*/
 	public static void main(String[] args) {
 		char[] board=createBoard();
 		givingInput();
+		showBoard(board);
 	}
 }
